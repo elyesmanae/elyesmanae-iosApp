@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		22170E95213967C60027DDD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170E94213967C60027DDD7 /* AppDelegate.m */; };
 		22170E98213967C60027DDD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170E97213967C60027DDD7 /* ViewController.m */; };
-		22170E9B213967C60027DDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22170E99213967C60027DDD7 /* Main.storyboard */; };
 		22170E9D213967C60027DDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22170E9C213967C60027DDD7 /* Assets.xcassets */; };
 		22170EA0213967C60027DDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22170E9E213967C60027DDD7 /* LaunchScreen.storyboard */; };
 		22170EA3213967C60027DDD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170EA2213967C60027DDD7 /* main.m */; };
 		22170EAD213967C60027DDD7 /* SubViewProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170EAC213967C60027DDD7 /* SubViewProjectTests.m */; };
 		22170EB8213967C60027DDD7 /* SubViewProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170EB7213967C60027DDD7 /* SubViewProjectUITests.m */; };
+		22170EC7213967ED0027DDD7 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22170EC6213967ED0027DDD7 /* HeaderView.m */; };
+		22A68B38213EBC4F00CCCADC /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A68B37213EBC4F00CCCADC /* TableViewController.m */; };
+		22A68B3B214002DF00CCCADC /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A68B3A214002DF00CCCADC /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 		22170E94213967C60027DDD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22170E96213967C60027DDD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		22170E97213967C60027DDD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		22170E9A213967C60027DDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22170E9C213967C60027DDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22170E9F213967C60027DDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22170EA1213967C60027DDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,12 @@
 		22170EB3213967C60027DDD7 /* SubViewProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubViewProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22170EB7213967C60027DDD7 /* SubViewProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubViewProjectUITests.m; sourceTree = "<group>"; };
 		22170EB9213967C60027DDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22170EC5213967D60027DDD7 /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		22170EC6213967ED0027DDD7 /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		22A68B36213EBC4F00CCCADC /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		22A68B37213EBC4F00CCCADC /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		22A68B39214002DF00CCCADC /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		22A68B3A214002DF00CCCADC /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +112,16 @@
 				22170E94213967C60027DDD7 /* AppDelegate.m */,
 				22170E96213967C60027DDD7 /* ViewController.h */,
 				22170E97213967C60027DDD7 /* ViewController.m */,
-				22170E99213967C60027DDD7 /* Main.storyboard */,
 				22170E9C213967C60027DDD7 /* Assets.xcassets */,
 				22170E9E213967C60027DDD7 /* LaunchScreen.storyboard */,
 				22170EA1213967C60027DDD7 /* Info.plist */,
 				22170EA2213967C60027DDD7 /* main.m */,
+				22170EC5213967D60027DDD7 /* HeaderView.h */,
+				22170EC6213967ED0027DDD7 /* HeaderView.m */,
+				22A68B36213EBC4F00CCCADC /* TableViewController.h */,
+				22A68B37213EBC4F00CCCADC /* TableViewController.m */,
+				22A68B39214002DF00CCCADC /* AboutViewController.h */,
+				22A68B3A214002DF00CCCADC /* AboutViewController.m */,
 			);
 			path = SubViewProject;
 			sourceTree = "<group>";
@@ -240,7 +252,6 @@
 			files = (
 				22170EA0213967C60027DDD7 /* LaunchScreen.storyboard in Resources */,
 				22170E9D213967C60027DDD7 /* Assets.xcassets in Resources */,
-				22170E9B213967C60027DDD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A68B3B214002DF00CCCADC /* AboutViewController.m in Sources */,
 				22170E98213967C60027DDD7 /* ViewController.m in Sources */,
 				22170EA3213967C60027DDD7 /* main.m in Sources */,
 				22170E95213967C60027DDD7 /* AppDelegate.m in Sources */,
+				22A68B38213EBC4F00CCCADC /* TableViewController.m in Sources */,
+				22170EC7213967ED0027DDD7 /* HeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		22170E99213967C60027DDD7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22170E9A213967C60027DDD7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		22170E9E213967C60027DDD7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
