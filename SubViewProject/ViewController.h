@@ -10,9 +10,9 @@
 #import "HeaderView.h"
 #import "TableViewController.h"
 #import "AboutViewController.h"
-#import "DescriptionViewController.h"
 
 @interface ViewController : UIViewController<UITextFieldDelegate>
+
 {
     TableViewController *tableViewController;
     HeaderView *headerView;

@@ -2,43 +2,60 @@
 //  DescriptionViewController.m
 //  SubViewProject
 //
-//  Created by Elzes on 10.09.18.
+//  Created by Elzes on 11.09.18.
 //  Copyright © 2018 Elzes. All rights reserved.
 //
 
 #import "DescriptionViewController.h"
-
 @interface DescriptionViewController ()
 
 @end
 
 @implementation DescriptionViewController
 
-//@synthesize  _textView = textView;
+@synthesize _label = label,
+            _date = date,
+            _myDate = myDate;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-   UITextView *textView = [[UITextView alloc] init];
-   textView.text=@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis tincidunt libero, sed convallis libero. Vivamus non dictum velit. Nulla facilisi. Praesent auctor leo ac dolor imperdiet malesuada. Donec bibendum, purus ac pellentesque dictum, eros urna volutpat arcu, non porttitor nulla neque vel tellus. Sed bibendum nibh non pellentesque mattis. Donec pretium odio non efficitur blandit. Pellentesque pretium porttitor nunc, eu dapibus eros euismod a. Donec nunc elit, pulvinar eget turpis sit amet, vehicula posuere eros. Fusce ac bibendum velit. Suspendisse in ante augue. In a odio et sem venenatis semper nec in urna";
     
-    textView.tintColor = [UIColor blackColor];
+    date = [[UILabel alloc] initWithFrame:CGRectMake(50, 100, 40, 31)];
+    date.text = @"Date";
+    date.textColor =[UIColor blueColor];
+    [self.view addSubview:date];
+    
+    myDate = [[UITextView alloc] initWithFrame:CGRectMake(150, 105, 150, 31)];
+    myDate.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:myDate];
+    
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 150, 400, 400)];
+    [datePicker setDate:[NSDate date]];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [datePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+    datePicker.timeZone = [NSTimeZone defaultTimeZone];
+    [myDate setInputView:datePicker];
+    label.text = myDate.text;
+    [self.view addSubview:datePicker];
+    
+    label = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 100, 30)];
+    label.text = @"Date Picker";
+    label.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:label];
+    
+}
+- (void)datePickerValueChanged:(id)sender {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // if you want to add realTime add "h:mm a" to the string@“"
+    [dateFormatter setDateFormat:@"dd/MM/YYYY"];
+    myDate.text = [dateFormatter stringFromDate:datePicker.date];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-
+#import "DescriptionViewController.h"
 
 @implementation TableViewController
 
@@ -19,7 +19,7 @@ _sectionName =sectionName ;
     self = [super init];
     if(self){
    //     self.view.backgroundColor =  [UIColor colorWithRed:0.96f green:0.96f blue:0.96f alpha:1.0f];
-        
+
         tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         tableView.frame = CGRectMake(0, 0, 414, 450);
         tableView.delegate = self;
@@ -34,10 +34,11 @@ _sectionName =sectionName ;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
   
     myArray = [[NSMutableArray alloc]initWithObjects:
-               @"New York",@"Los Angeles",@"Chicago",@"Boston", nil];
-    sectionName = @"United States of America";
+               @"Berlin",@"Munich",@"Frankfort",@"Karlsruhe", nil];
+    sectionName = @"I want to travel to";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,24 +67,27 @@ _sectionName =sectionName ;
     cell.textLabel.text = [NSString stringWithFormat:@"%@",myArray[indexPath.row]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(1, 5, 50, 25)];
+    //Add an image to the cell
+    // img.image = [UIImage imageNamed:@"airplane.png"];
+    cell.imageView.image = img.image;
+    //cell.accessoryType = UITableViewCellAccessoryDetailButton;
     return cell;
 }
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
-    NSString *headerTitle = @"United States of America";
+    NSString *headerTitle = sectionName;
     return headerTitle;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-   // [myArray addObject:myArray[indexPath.row]];
-    NSLog(@"lalaaaaaalaaaaaaaaaaa!!1");
-   /* DescriptionViewController *description = [[DescriptionViewController alloc] initWithNibName:@"DescriptionViewController" bundle:nil];
-    [self.navigationController pushViewController:description animated:YES];*/
-    
+    self.title = [myArray objectAtIndex:indexPath.row];
+   [myArray addObject:myArray[indexPath.row]];
+  DescriptionViewController  *desc = [DescriptionViewController new];
+    [self presentViewController:desc animated:YES completion:nil];
 }
 
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -112,5 +116,4 @@ _sectionName =sectionName ;
     
     [myArray exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
 }
-
 @end

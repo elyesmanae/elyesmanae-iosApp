@@ -19,12 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    label =[[UILabel alloc] initWithFrame:CGRectMake(10, 570, 200, 100)];
+    label =[[UILabel alloc] initWithFrame:CGRectMake(10, 15, 50, 50)];
     label.text = @"about";
     [self.view addSubview:label];
     
-    text = [[UITextView alloc] initWithFrame:CGRectMake(0, 650, 414, 736)];
-    text.text = @"Pulvinar eget turpis sit amet, vehicula posuere eros. Fusce ac bibendum velit. Suspendisse in ante augue. In a odio et sem venenatis semper nec in urna.";
+    text = [[UITextView alloc] initWithFrame:CGRectMake(0, 50, 414, 150)];
+    text.text = @"Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, or other means, with or without luggage, and can be one way or round trip.Pulvinar eget turpis sit amet, vehicula posuere eros. Fusce ac bibendum velit In a odio et sem venenatis semper.Pulvinar eget turpis sit amet, vehicula posuere eros. Fusce ac bibendum velit. Suspendisse in ante augue. In a odio et sem venenatis semper.";
     text.contentSize = CGSizeMake(100, 25)  ;
     //text.backgroundColor = [UIColor grayColor];
     [self.view addSubview:text];
@@ -34,15 +34,5 @@
     [super didReceiveMemoryWarning];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

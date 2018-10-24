@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DescriptionViewController.h"
 @interface TableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 {
     NSMutableArray *myArray;
     NSString *sectionName;
 }
-
 @property (strong) UITableView *_tableView;
 @property (strong) NSMutableArray *_myArray;
 @property (strong) NSString *_sectionName;

@@ -14,11 +14,12 @@ _searchTextField = searchTextField;
 -(id) init {
     self = [super init];
     if (self){
+       
         btnAdd = [UIButton buttonWithType:UIButtonTypeSystem];
         btnAdd.layer.cornerRadius = 8;
         btnAdd.clipsToBounds = YES;
         [btnAdd setTitle:@"Add" forState:UIControlStateNormal];
-        btnAdd.backgroundColor = [UIColor blueColor];
+        btnAdd.backgroundColor = [UIColor grayColor];
         [btnAdd setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self addSubview:btnAdd];
        
@@ -38,16 +39,18 @@ _searchTextField = searchTextField;
 
     CGRect Frm_BtnAdd = CGRectZero;
     Frm_BtnAdd.size =  CGSizeMake(100, 31);
-    Frm_BtnAdd.origin.x = 270;
-    Frm_BtnAdd.origin.y = 50;
+    Frm_BtnAdd.origin.x = 290;
+    Frm_BtnAdd.origin.y = 20;
     btnAdd.frame = Frm_BtnAdd;
     
     
     CGRect Frm_Search = CGRectZero;
     Frm_Search.size = CGSizeMake(220, 31);
-    Frm_Search.origin.y = 50;
-    Frm_Search.origin.x = 30;
+    Frm_Search.origin.x = 50;
+    Frm_Search.origin.y = 20;
     searchTextField.frame = Frm_Search;
+    
+
 }
 @end
 
