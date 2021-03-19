@@ -49,7 +49,7 @@
 
 -(void) viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    CGRect frame = CGRectMake(0, 0, 414, 70);//im not sure about it but its about the demesion
+    CGRect frame = CGRectMake(0, 0, 414, 70);//im not sure about it, but its about the demesion
     headerView.frame = frame;
     /*frame.origin.y = 100;
     frame.origin.x = 100;*/

@@ -49,14 +49,11 @@
     pdfView.tabBarItem.title = @"Pdf";
     pdfView.tabBarItem.image = [UIImage imageNamed:@"pdf.png"];
     
-    CompanyViewDetail *cdetail = [[CompanyViewDetail alloc] init];
-    
     
     [arrayView addObject:view];
     [arrayView addObject:companyView];
     [arrayView addObject:mapView];
     [arrayView addObject:pdfView];
-    [arrayView addObject:cdetail];
     
     
     self.tabBars.viewControllers = arrayView;
